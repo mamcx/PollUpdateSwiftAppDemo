@@ -15,17 +15,8 @@ class MasterViewController: UITableViewController {
     var objects = Array<Poll>()
 
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        if let split = self.splitViewController {
-            let controllers = split.viewControllers
-            self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
-        }
-    }
-
     override func viewWillAppear(animated: Bool) {
-        self.clearsSelectionOnViewWillAppear = self.splitViewController!.collapsed
+        self.clearsSelectionOnViewWillAppear = true
         super.viewWillAppear(animated)
     }
 
@@ -48,8 +39,6 @@ class MasterViewController: UITableViewController {
                 let poll = objects[indexPath.row]
                 let controller = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController
                 controller.detailItem = poll
-                controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
-                controller.navigationItem.leftItemsSupplementBackButton = true
             }
         }
     }

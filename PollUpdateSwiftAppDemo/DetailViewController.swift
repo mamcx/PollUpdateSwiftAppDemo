@@ -31,6 +31,10 @@ class DetailViewController: UITableViewController {
         
     }
     
+    @IBAction func closeView() {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     func configureView() {
         // Update the user interface for the detail item.
         if let detail = self.detailItem {
@@ -46,7 +50,7 @@ class DetailViewController: UITableViewController {
         Upvote(choice.pollId, choiceId: choice.id)
             .onSuccess{msg in
                 self.loadChoices(choice.pollId) //TODO: The mock server not update the count!
-                self.showMessage(msg, type: .Success, options: [.TextNumberOfLines(2)])
+                self.showMessage(msg, type: .Success, options: nil)
             }.onFailure {error in
                 self.showMessage(error.description, type: .Error, options: [.Height(80), .TextNumberOfLines(6)])
         }

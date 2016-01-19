@@ -12,6 +12,7 @@ import BrightFutures
 import SwiftyJSON
 
 enum Router: URLRequestConvertible {
+    //TODO: Currently only the mockup end-pint work
     static let baseURLString = "http://private-anon-9763818b2-mobilitypt.apiary-mock.com"
     //static let baseURLString = "http://polls.apiblueprint.org/"
     
@@ -42,6 +43,7 @@ enum Router: URLRequestConvertible {
     }
     
     // MARK: URLRequestConvertible
+    // Auto-build the corret URL + METHOD
     var URLRequest: NSMutableURLRequest {
         let URL = NSURL(string: Router.baseURLString)!
         let mutableURLRequest = NSMutableURLRequest(URL: URL.URLByAppendingPathComponent(path))
@@ -53,10 +55,8 @@ enum Router: URLRequestConvertible {
     }
 }
 
-enum ApiError: ErrorType {
-    case NetError(NSError)
-}
-
+// Generic fetcher. It turn the async call into a promise to allow
+// easier interface and reduce callback-hell
 func request(route:Router) ->  Future<JSON, NSError> {
     let promise = Promise<JSON, NSError>()
     
