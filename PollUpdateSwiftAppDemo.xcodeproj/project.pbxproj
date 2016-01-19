@@ -1,0 +1,413 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4CCFA7191C4E811300BD24A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCFA7181C4E811300BD24A7 /* AppDelegate.swift */; };
+		4CCFA71B1C4E811300BD24A7 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCFA71A1C4E811300BD24A7 /* MasterViewController.swift */; };
+		4CCFA71D1C4E811300BD24A7 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCFA71C1C4E811300BD24A7 /* DetailViewController.swift */; };
+		4CCFA7201C4E811300BD24A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CCFA71E1C4E811300BD24A7 /* Main.storyboard */; };
+		4CCFA7221C4E811300BD24A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CCFA7211C4E811300BD24A7 /* Assets.xcassets */; };
+		4CCFA7251C4E811300BD24A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CCFA7231C4E811300BD24A7 /* LaunchScreen.storyboard */; };
+		4CCFA7301C4E811300BD24A7 /* PollUpdateSwiftAppDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CCFA72F1C4E811300BD24A7 /* PollUpdateSwiftAppDemoTests.swift */; };
+		4CCFA73B1C4E830400BD24A7 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 4CCFA73A1C4E830400BD24A7 /* Podfile */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4CCFA72C1C4E811300BD24A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4CCFA70D1C4E811300BD24A7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4CCFA7141C4E811300BD24A7;
+			remoteInfo = PollUpdateSwiftAppDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4CCFA7151C4E811300BD24A7 /* PollUpdateSwiftAppDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PollUpdateSwiftAppDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CCFA7181C4E811300BD24A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4CCFA71A1C4E811300BD24A7 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		4CCFA71C1C4E811300BD24A7 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		4CCFA71F1C4E811300BD24A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4CCFA7211C4E811300BD24A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4CCFA7241C4E811300BD24A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4CCFA7261C4E811300BD24A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CCFA72B1C4E811300BD24A7 /* PollUpdateSwiftAppDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PollUpdateSwiftAppDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CCFA72F1C4E811300BD24A7 /* PollUpdateSwiftAppDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PollUpdateSwiftAppDemoTests.swift; sourceTree = "<group>"; };
+		4CCFA7311C4E811300BD24A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CCFA73A1C4E830400BD24A7 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4CCFA7121C4E811300BD24A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CCFA7281C4E811300BD24A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4CCFA70C1C4E811300BD24A7 = {
+			isa = PBXGroup;
+			children = (
+				4CCFA73A1C4E830400BD24A7 /* Podfile */,
+				4CCFA7171C4E811300BD24A7 /* PollUpdateSwiftAppDemo */,
+				4CCFA72E1C4E811300BD24A7 /* PollUpdateSwiftAppDemoTests */,
+				4CCFA7161C4E811300BD24A7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4CCFA7161C4E811300BD24A7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4CCFA7151C4E811300BD24A7 /* PollUpdateSwiftAppDemo.app */,
+				4CCFA72B1C4E811300BD24A7 /* PollUpdateSwiftAppDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4CCFA7171C4E811300BD24A7 /* PollUpdateSwiftAppDemo */ = {
+			isa = PBXGroup;
+			children = (
+				4CCFA7181C4E811300BD24A7 /* AppDelegate.swift */,
+				4CCFA71A1C4E811300BD24A7 /* MasterViewController.swift */,
+				4CCFA71C1C4E811300BD24A7 /* DetailViewController.swift */,
+				4CCFA71E1C4E811300BD24A7 /* Main.storyboard */,
+				4CCFA7211C4E811300BD24A7 /* Assets.xcassets */,
+				4CCFA7231C4E811300BD24A7 /* LaunchScreen.storyboard */,
+				4CCFA7261C4E811300BD24A7 /* Info.plist */,
+			);
+			path = PollUpdateSwiftAppDemo;
+			sourceTree = "<group>";
+		};
+		4CCFA72E1C4E811300BD24A7 /* PollUpdateSwiftAppDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				4CCFA72F1C4E811300BD24A7 /* PollUpdateSwiftAppDemoTests.swift */,
+				4CCFA7311C4E811300BD24A7 /* Info.plist */,
+			);
+			path = PollUpdateSwiftAppDemoTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4CCFA7141C4E811300BD24A7 /* PollUpdateSwiftAppDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CCFA7341C4E811300BD24A7 /* Build configuration list for PBXNativeTarget "PollUpdateSwiftAppDemo" */;
+			buildPhases = (
+				4CCFA7111C4E811300BD24A7 /* Sources */,
+				4CCFA7121C4E811300BD24A7 /* Frameworks */,
+				4CCFA7131C4E811300BD24A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PollUpdateSwiftAppDemo;
+			productName = PollUpdateSwiftAppDemo;
+			productReference = 4CCFA7151C4E811300BD24A7 /* PollUpdateSwiftAppDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4CCFA72A1C4E811300BD24A7 /* PollUpdateSwiftAppDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CCFA7371C4E811300BD24A7 /* Build configuration list for PBXNativeTarget "PollUpdateSwiftAppDemoTests" */;
+			buildPhases = (
+				4CCFA7271C4E811300BD24A7 /* Sources */,
+				4CCFA7281C4E811300BD24A7 /* Frameworks */,
+				4CCFA7291C4E811300BD24A7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4CCFA72D1C4E811300BD24A7 /* PBXTargetDependency */,
+			);
+			name = PollUpdateSwiftAppDemoTests;
+			productName = PollUpdateSwiftAppDemoTests;
+			productReference = 4CCFA72B1C4E811300BD24A7 /* PollUpdateSwiftAppDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4CCFA70D1C4E811300BD24A7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Mario Alejandro Montoya";
+				TargetAttributes = {
+					4CCFA7141C4E811300BD24A7 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					4CCFA72A1C4E811300BD24A7 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 4CCFA7141C4E811300BD24A7;
+					};
+				};
+			};
+			buildConfigurationList = 4CCFA7101C4E811300BD24A7 /* Build configuration list for PBXProject "PollUpdateSwiftAppDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4CCFA70C1C4E811300BD24A7;
+			productRefGroup = 4CCFA7161C4E811300BD24A7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4CCFA7141C4E811300BD24A7 /* PollUpdateSwiftAppDemo */,
+				4CCFA72A1C4E811300BD24A7 /* PollUpdateSwiftAppDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4CCFA7131C4E811300BD24A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CCFA7251C4E811300BD24A7 /* LaunchScreen.storyboard in Resources */,
+				4CCFA7221C4E811300BD24A7 /* Assets.xcassets in Resources */,
+				4CCFA73B1C4E830400BD24A7 /* Podfile in Resources */,
+				4CCFA7201C4E811300BD24A7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CCFA7291C4E811300BD24A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4CCFA7111C4E811300BD24A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CCFA71D1C4E811300BD24A7 /* DetailViewController.swift in Sources */,
+				4CCFA71B1C4E811300BD24A7 /* MasterViewController.swift in Sources */,
+				4CCFA7191C4E811300BD24A7 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CCFA7271C4E811300BD24A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CCFA7301C4E811300BD24A7 /* PollUpdateSwiftAppDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4CCFA72D1C4E811300BD24A7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4CCFA7141C4E811300BD24A7 /* PollUpdateSwiftAppDemo */;
+			targetProxy = 4CCFA72C1C4E811300BD24A7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4CCFA71E1C4E811300BD24A7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4CCFA71F1C4E811300BD24A7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4CCFA7231C4E811300BD24A7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4CCFA7241C4E811300BD24A7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4CCFA7321C4E811300BD24A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4CCFA7331C4E811300BD24A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4CCFA7351C4E811300BD24A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PollUpdateSwiftAppDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.elmalabarista.PollUpdateSwiftAppDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4CCFA7361C4E811300BD24A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PollUpdateSwiftAppDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.elmalabarista.PollUpdateSwiftAppDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		4CCFA7381C4E811300BD24A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PollUpdateSwiftAppDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.elmalabarista.PollUpdateSwiftAppDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PollUpdateSwiftAppDemo.app/PollUpdateSwiftAppDemo";
+			};
+			name = Debug;
+		};
+		4CCFA7391C4E811300BD24A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PollUpdateSwiftAppDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.elmalabarista.PollUpdateSwiftAppDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PollUpdateSwiftAppDemo.app/PollUpdateSwiftAppDemo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4CCFA7101C4E811300BD24A7 /* Build configuration list for PBXProject "PollUpdateSwiftAppDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CCFA7321C4E811300BD24A7 /* Debug */,
+				4CCFA7331C4E811300BD24A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4CCFA7341C4E811300BD24A7 /* Build configuration list for PBXNativeTarget "PollUpdateSwiftAppDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CCFA7351C4E811300BD24A7 /* Debug */,
+				4CCFA7361C4E811300BD24A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4CCFA7371C4E811300BD24A7 /* Build configuration list for PBXNativeTarget "PollUpdateSwiftAppDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CCFA7381C4E811300BD24A7 /* Debug */,
+				4CCFA7391C4E811300BD24A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4CCFA70D1C4E811300BD24A7 /* Project object */;
+}
