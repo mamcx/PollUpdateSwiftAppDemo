@@ -50,7 +50,7 @@ enum Router: URLRequestConvertible {
 
         mutableURLRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
         mutableURLRequest.HTTPMethod = method.rawValue
-        print(mutableURLRequest)
+        print("Calling \(method.rawValue): \(mutableURLRequest.URLString)")
         return mutableURLRequest
     }
 }
