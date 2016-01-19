@@ -7,10 +7,10 @@
 //
 
 import UIKit
+import GSMessages
 
 class DetailViewController: UITableViewController {
-
-    @IBOutlet weak var detailDescriptionLabel: UILabel!
+    var objects = Array<Choice>()
 
 
     var detailItem: Poll? {
@@ -20,26 +20,61 @@ class DetailViewController: UITableViewController {
         }
     }
 
+    func loadChoices(pollId:String) {
+        ListChoises(pollId)
+            .onSuccess{ choices in
+                self.objects = choices
+                self.tableView.reloadData()
+            }.onFailure {error in
+                self.showMessage(error.description, type: .Error, options: [.Height(80), .TextNumberOfLines(6)])
+        }
+        
+    }
+    
     func configureView() {
         // Update the user interface for the detail item.
         if let detail = self.detailItem {
-            if let label = self.detailDescriptionLabel {
-                label.text = detail.title
-            }
+            let poll = detail as Poll
+            self.title = poll.title
+            loadChoices(poll.id)
         }
     }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        self.configureView()
+    func upvote(sender: UIButton!) {
+        let choice = objects[sender.tag]
+        
+        Upvote(choice.pollId, choiceId: choice.id)
+            .onSuccess{msg in
+                self.loadChoices(choice.pollId) //TODO: The mock server not update the count!
+                self.showMessage(msg, type: .Success, options: [.TextNumberOfLines(2)])
+            }.onFailure {error in
+                self.showMessage(error.description, type: .Error, options: [.Height(80), .TextNumberOfLines(6)])
+        }
+    }
+    
+    // MARK: - Table View
+    
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return objects.count
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! ChoiceCellTableViewCell
+        
+        let choice = objects[indexPath.row]
+        
+        cell.titleLabel.text = choice.choice
+        cell.subtitleLabel.text = "\(choice.votes) votes"
+        cell.upvoteButton.tag = indexPath.row
+        cell.upvoteButton.addTarget(self, action: "upvote:", forControlEvents: .TouchUpInside)
+        
+        return cell
     }
-
-
 }
+
+
 

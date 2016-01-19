@@ -25,7 +25,8 @@ struct Poll {
 }
 
 struct Choice {
-    let id: Int32
+    let id: Int
+    let pollId: String
     let choice: String
     let votes: Int32
     

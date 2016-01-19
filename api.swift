@@ -16,8 +16,8 @@ enum Router: URLRequestConvertible {
     //static let baseURLString = "http://polls.apiblueprint.org/"
     
     case ListPolls
-    case ListChoices(Int32)
-    case Upvote(Int32, Int32)
+    case ListChoices(String)
+    case Upvote(String, Int)
    
     var method: Alamofire.Method {
         switch self {
@@ -35,9 +35,9 @@ enum Router: URLRequestConvertible {
         case .ListPolls:
             return "/polls"
         case .ListChoices(let pollId):
-            return "/polls/\(pollId)"
+            return "/polls/\(pollId)/choices"
         case .Upvote(let pollId, let choiceId):
-            return "/polls/\(pollId)/\(choiceId)/upvotes"
+            return "/polls/\(pollId)/choices/\(choiceId)/upvotes"
         }
     }
     
@@ -60,7 +60,7 @@ enum ApiError: ErrorType {
 func request(route:Router) ->  Future<JSON, NSError> {
     let promise = Promise<JSON, NSError>()
     
-    Alamofire.request(Router.ListPolls)
+    Alamofire.request(route)
         .validate(statusCode: 200..<300)
         .validate(contentType: ["application/json"])
         .responseJSON { response in
@@ -100,6 +100,44 @@ func ListPolls() -> Future< Array<Poll>, NSError> {
             }
             
             promise.success(rows);
+        }.onFailure { error in
+            promise.failure(error)
+    }
+    
+    return promise.future
+}
+
+func ListChoises(pollId:String) -> Future< Array<Choice>, NSError> {
+    let promise = Promise< Array<Choice>, NSError>()
+    
+    request(Router.ListChoices(pollId))
+        .onSuccess{ json in
+            var rows = Array<Choice>()
+            
+            for (_, subJson):(String, JSON) in json {
+                let p = Choice(
+                    id:subJson["id"].int!,
+                    pollId:pollId,
+                    choice:subJson["choice"].string!,
+                    votes:subJson["votes"].int32!
+                )
+                rows.append(p)
+            }
+            
+            promise.success(rows);
+        }.onFailure { error in
+            promise.failure(error)
+    }
+    
+    return promise.future
+}
+
+func Upvote(pollId:String, choiceId:Int) -> Future<String, NSError> {
+    let promise = Promise<String, NSError>()
+    
+    request(Router.Upvote(pollId, choiceId))
+        .onSuccess{ json in
+            promise.success(json["greeting"].string!);
         }.onFailure { error in
             promise.failure(error)
     }
